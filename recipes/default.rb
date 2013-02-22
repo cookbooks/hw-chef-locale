@@ -24,7 +24,7 @@ if platform?("ubuntu", "debian")
   end
 
   execute "Update locale" do
-    command "update-locale LANG=#{node[:locale][:lang]}"
+    command "update-locale LANG=#{node[:locale][:lang]} LC_ALL=#{node[:locale][:lc_all]}"
   end
 
 end
